@@ -1,0 +1,11 @@
+.menu-wrapper{
+    &{
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 850px){
+            margin: 0;
+        }
+    }
+}
