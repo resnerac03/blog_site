@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react'
 import fb from './../config/firebase';
 import { Modal, Container, Row, Col, Button } from 'react-bootstrap';
 
-const  DeleteUser = (props) => {
+const  DeletePost = (props) => {
 
-    const deleteUser = async (id) => {
+    const deletePost = async (id) => {
         await fb.database().ref('posts/' + id).remove().then(props.closeDeleteBox)
     }
 
@@ -31,7 +31,7 @@ const  DeleteUser = (props) => {
                         </Row>
                         <Row>
                             <Col>
-                                <Button className="mr-1" variant="primary" onClick={() => deleteUser(props.currentData.key)} >CONFIRM</Button>
+                                <Button className="mr-1" variant="primary" onClick={() => deletePost(props.currentData.key)} >CONFIRM</Button>
                                 <Button variant="primary" onClick={props.closeDeleteBox}>CANCEL</Button>
                             </Col>
                         </Row>
@@ -42,4 +42,4 @@ const  DeleteUser = (props) => {
     )
 }
 
-export default DeleteUser
+export default DeletePost

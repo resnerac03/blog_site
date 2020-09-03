@@ -4,7 +4,7 @@ import { Form, Modal, Button, Container, Row, Col } from 'react-bootstrap';
 import { FaTrashAlt } from "react-icons/fa";
 import useFormEdit from './../utils/useForm';
 
-const  EditUser = ({currentData, closeEditBox, editBox}) => {
+const  EditPost = ({currentData, closeEditBox, editBox}) => {
     
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
@@ -62,4 +62,4 @@ const  EditUser = ({currentData, closeEditBox, editBox}) => {
     )
 }
 
-export default EditUser
+export default EditPost

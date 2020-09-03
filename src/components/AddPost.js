@@ -19,7 +19,7 @@ const AddPost = (props) => {
         return errors;
     }
 
-    const addUser = () => {
+    const addPost = () => {
 
         const id = uuidv4();
         const today = new Date().toLocaleString()
@@ -35,7 +35,7 @@ const AddPost = (props) => {
 
     }
 
-    const [values, errors, validated, handleChange, handleSubmit] = useForm(addUser, {title: '', content: ''}, validateForm);
+    const [values, errors, validated, handleChange, handleSubmit] = useForm(addPost, {title: '', content: ''}, validateForm);
 
     
 
